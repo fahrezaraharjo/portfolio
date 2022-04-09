@@ -1,7 +1,7 @@
 .about__container {
     display: grid;
     grid-template-columns: 35% 50%;
-    gap: 15;
+    gap: 15%;
 }
 
 .about__me {
@@ -16,7 +16,7 @@
 .about__me-image {
     border-radius: 2rem;
     overflow: hidden;
-    transform-origin: rotate(10deg);
+    transform: rotate(10deg);
     transition: var(--transition);
 }
 
@@ -74,8 +74,8 @@
         gap: 0;
     }
     .about__me {
-        width: 70%;
-        margin: 4rem auto 4rem;
+        width: 50%;
+        margin: 2rem auto 4rem;
     }
     .about__content p {
         margin: 1rem 0 1.5rem
