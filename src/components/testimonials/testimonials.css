@@ -1,5 +1,6 @@
 .container.testimonials__container {
     width: 40%;
+    padding: 4rem;
 }
 
 .client__avatar {
@@ -46,4 +47,8 @@
     .client__review {
         width: var(--container-width-sm);
     }
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullets {
+    background: var(--color-primary);
 }
