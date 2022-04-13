@@ -4,10 +4,22 @@ import {MdOutlineMail} from "react-icons/md"
 import {RiMessengerLine} from "react-icons/ri"
 import {ImWhatsapp} from "react-icons/im"
 import {AiOutlineInstagram} from "react-icons/ai"
+import { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 
+const Contact = () => {
+  const form = useRef();
 
-const contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zf80y6n', 'template_tuaw30u', form.current, '40bV720JRKdiKu1SU')
+
+    e.target.reset()
+    
+  };
+
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -41,7 +53,7 @@ const contact = () => {
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
-        <form action=''>
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Your Full Name' required />
           <input type="text" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
@@ -52,4 +64,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
